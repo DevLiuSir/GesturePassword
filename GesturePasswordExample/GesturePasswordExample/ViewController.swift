@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         
         print("效验手势密码---\(#function)")
         
-        if GesturePasswordViewController.gesturesPassword().length > 0 {
+        if GesturePasswordViewController.gesturesPassword().count > 0 {
             let vc = GesturePasswordViewController(unlockType: .validatePassword)
             self.present(vc, animated: true, completion: nil)
         }

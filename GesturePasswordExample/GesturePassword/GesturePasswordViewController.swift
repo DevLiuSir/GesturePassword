@@ -28,8 +28,8 @@ private let magin: CGFloat = 5
 private let btnH: CGFloat = 30
 /// 按钮宽度
 private let btnW: CGFloat = (screenW - maginX * 2 - magin * 2) / 3
-
-
+/// 错误次数
+private var errorCount: Int = 5
 
 /// 手势密码控制器
 class GesturePasswordViewController: UIViewController {
@@ -37,12 +37,10 @@ class GesturePasswordViewController: UIViewController {
     /// 创建的手势密码
     var lastGesturePassword = ""
     
-    /// 解锁类型
+    /// 解锁类型(默认:创建手势密码)
     var unlockType = LCUnlockType.createPassword
 
-    
     // MARK: - 懒加载
-    
     /// 手势密码视图
     private lazy var gestureView: GesturePasswordView = {
         let gesture = GesturePasswordView(frame: CGRect(x: 0, y: 200, width: screenW, height: screenW))
@@ -110,7 +108,6 @@ class GesturePasswordViewController: UIViewController {
         return forget
     }()
     
-  
     // MARK: - 自定义初始化方法
     ///
     /// - Parameter unlockType: 解锁类型
@@ -135,6 +132,7 @@ class GesturePasswordViewController: UIViewController {
 
 // MARK: - 私有方法
 extension GesturePasswordViewController {
+    
     /// 添加视图
     private func addSub() {
         view.addSubview(headIcon)
@@ -194,15 +192,13 @@ extension GesturePasswordViewController {
     /// 验证手势密码
     ///
     /// - Parameter gesturesPassword: 密码字符串
-    private func validateGesturesPassword(_ gesturesPassword: String?) {
-        
-        /// 错误次数
-        var errorCount: Int = 5
-        
-        guard gesturesPassword == GesturePasswordViewController.gesturesPassword() as String else {
-            
-            if errorCount - 1 == 0 {  // 如果已经输错五次了！ 退出重新登陆!
-                let alert = UIAlertController(title: "手势密码已失效", message: "请重新登陆", preferredStyle: .alert)
+    private func validateGesturesPassword(_ gesturesPassword: String) {
+
+        // 如果验证通过, 执行{}后面的代码
+        guard gesturesPassword == GesturePasswordViewController.gesturesPassword() else {
+            // 如果已经输错五次,弹出警告框
+            if errorCount - 1 == 0 {
+                let alert = UIAlertController(title: "", message: "忘记手势密码, 需要重新登陆", preferredStyle: .alert)
                 let other = UIAlertAction(title: "重新登陆", style: .default, handler: nil)
                 alert.addAction(other)
                 self.present(alert, animated: true, completion: nil)
@@ -214,35 +210,9 @@ extension GesturePasswordViewController {
             shakeAnimation(for: statusLabel)
             return
         }
-        
         dismiss(animated: true, completion: {
             errorCount = 5
         })
-        
-        
-        //
-        //        if gesturesPassword == GesturePasswordViewController.gesturesPassword() as String {
-        //            dismiss(animated: true, completion: {
-        //                errorCount = 5
-        //            })
-        //        } else {
-        //            if errorCount - 1 == 0 {
-        //                // 你已经输错五次了！ 退出重新登陆！
-        //                let alert = UIAlertController(title: "手势密码已失效", message: "请重新登陆", preferredStyle: .alert)
-        //                let other = UIAlertAction(title: "重新登陆", style: .default, handler: { (UIAlertAction) in
-        //                    print("您点击了其他按钮")
-        //                })
-        //                alert.addAction(other)
-        //                self.present(alert, animated: true, completion: nil)
-        //                errorCount = 5
-        //
-        //                return
-        //            }
-        //
-        //            errorCount -= 1
-        //            statusLabel.text = "密码错误，还可以再输入\(errorCount)次"
-        //            shakeAnimation(for: statusLabel)
-        //        }
     }
     
     /// 抖动动画
@@ -310,8 +280,8 @@ extension GesturePasswordViewController {
         UserDefaults.standard.synchronize()
     }
     /// 获取密码字符串
-    class func gesturesPassword() -> NSString {
-        return UserDefaults.standard.object(forKey: GesturesPassword) as! NSString
+    class func gesturesPassword() -> String {
+        return UserDefaults.standard.object(forKey: GesturesPassword) as! String
     }
 }
 
@@ -324,7 +294,7 @@ extension GesturePasswordViewController: LCGesturePasswordViewDelegate {
         case .createPassword:
             createGesturesPassword(gesturePassword!)
         case .validatePassword:
-            validateGesturesPassword(gesturePassword)
+            validateGesturesPassword(gesturePassword!)
         }
     }
     

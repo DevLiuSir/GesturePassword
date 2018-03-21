@@ -26,7 +26,7 @@ class GesturePasswordButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         layer.borderColor = UIColor.gray.cgColor
-        layer.borderWidth = 0.5
+        layer.borderWidth = 1
         layer.cornerRadius = frame.width * 0.5
         layer.masksToBounds = true
     }
