@@ -12,6 +12,11 @@
 		6B04C98A2067C21F007264BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B04C9882067C21F007264BA /* Main.storyboard */; };
 		6B04C98C2067C220007264BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B04C98B2067C220007264BA /* Assets.xcassets */; };
 		6B04C98F2067C220007264BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B04C98D2067C220007264BA /* LaunchScreen.storyboard */; };
+		6B87FE4C20761AF50052A655 /* GesturePasswordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B87FE4620761AF50052A655 /* GesturePasswordButton.swift */; };
+		6B87FE4D20761AF50052A655 /* GesturePasswordPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B87FE4720761AF50052A655 /* GesturePasswordPreview.swift */; };
+		6B87FE4E20761AF50052A655 /* GesturePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B87FE4820761AF50052A655 /* GesturePasswordView.swift */; };
+		6B87FE4F20761AF50052A655 /* GesturePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B87FE4920761AF50052A655 /* GesturePasswordViewController.swift */; };
+		6B87FE5020761AF50052A655 /* solarized-yinyang.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B87FE4A20761AF50052A655 /* solarized-yinyang.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		6B04C98B2067C220007264BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B04C98E2067C220007264BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B04C9902067C220007264BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B87FE4620761AF50052A655 /* GesturePasswordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GesturePasswordButton.swift; sourceTree = "<group>"; };
+		6B87FE4720761AF50052A655 /* GesturePasswordPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GesturePasswordPreview.swift; sourceTree = "<group>"; };
+		6B87FE4820761AF50052A655 /* GesturePasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GesturePasswordView.swift; sourceTree = "<group>"; };
+		6B87FE4920761AF50052A655 /* GesturePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GesturePasswordViewController.swift; sourceTree = "<group>"; };
+		6B87FE4A20761AF50052A655 /* solarized-yinyang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "solarized-yinyang.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 		6B04C9832067C21F007264BA /* GesturePasswordExample */ = {
 			isa = PBXGroup;
 			children = (
+				6B87FE4420761AF50052A655 /* GesturePassword */,
 				6B04C9842067C21F007264BA /* AppDelegate.swift */,
 				6B04C9862067C21F007264BA /* ViewController.swift */,
 				6B04C9882067C21F007264BA /* Main.storyboard */,
@@ -63,6 +74,18 @@
 			);
 			path = GesturePasswordExample;
 			sourceTree = "<group>";
+		};
+		6B87FE4420761AF50052A655 /* GesturePassword */ = {
+			isa = PBXGroup;
+			children = (
+				6B87FE4A20761AF50052A655 /* solarized-yinyang.png */,
+				6B87FE4820761AF50052A655 /* GesturePasswordView.swift */,
+				6B87FE4720761AF50052A655 /* GesturePasswordPreview.swift */,
+				6B87FE4620761AF50052A655 /* GesturePasswordButton.swift */,
+				6B87FE4920761AF50052A655 /* GesturePasswordViewController.swift */,
+			);
+			path = GesturePassword;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -126,6 +149,7 @@
 				6B04C98F2067C220007264BA /* LaunchScreen.storyboard in Resources */,
 				6B04C98C2067C220007264BA /* Assets.xcassets in Resources */,
 				6B04C98A2067C21F007264BA /* Main.storyboard in Resources */,
+				6B87FE5020761AF50052A655 /* solarized-yinyang.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +161,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B04C9872067C21F007264BA /* ViewController.swift in Sources */,
+				6B87FE4F20761AF50052A655 /* GesturePasswordViewController.swift in Sources */,
+				6B87FE4E20761AF50052A655 /* GesturePasswordView.swift in Sources */,
+				6B87FE4C20761AF50052A655 /* GesturePasswordButton.swift in Sources */,
 				6B04C9852067C21F007264BA /* AppDelegate.swift in Sources */,
+				6B87FE4D20761AF50052A655 /* GesturePasswordPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

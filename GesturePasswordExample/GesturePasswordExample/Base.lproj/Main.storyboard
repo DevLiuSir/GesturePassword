@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,52 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GesturePasswordExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBQ-El-HaI">
+                                <rect key="frame" x="141" y="331" width="92" height="30"/>
+                                <state key="normal" title="创建手势密码"/>
+                                <connections>
+                                    <action selector="createBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xwg-lF-BmM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Or-sj-3ii">
+                                <rect key="frame" x="141" y="451" width="92" height="30"/>
+                                <state key="normal" title="删除手势密码"/>
+                                <connections>
+                                    <action selector="deleteBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CFk-Fo-Uy1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGV-PQ-yib">
+                                <rect key="frame" x="141" y="393" width="92" height="30"/>
+                                <state key="normal" title="效验手势密码"/>
+                                <connections>
+                                    <action selector="validationBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P5g-12-8q5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Or-sj-3ii" firstAttribute="width" secondItem="CBQ-El-HaI" secondAttribute="width" id="2sh-N6-1xF"/>
+                            <constraint firstItem="6Or-sj-3ii" firstAttribute="top" secondItem="JGV-PQ-yib" secondAttribute="bottom" constant="28" id="9Vh-kR-MsX"/>
+                            <constraint firstItem="CBQ-El-HaI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BeT-gV-TR0"/>
+                            <constraint firstItem="JGV-PQ-yib" firstAttribute="top" secondItem="CBQ-El-HaI" secondAttribute="bottom" constant="32" id="DJ0-WT-TLX"/>
+                            <constraint firstItem="JGV-PQ-yib" firstAttribute="height" secondItem="CBQ-El-HaI" secondAttribute="height" id="MNo-zf-Fo5"/>
+                            <constraint firstItem="JGV-PQ-yib" firstAttribute="width" secondItem="CBQ-El-HaI" secondAttribute="width" id="WSY-P6-HVt"/>
+                            <constraint firstItem="JGV-PQ-yib" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WnF-ip-B5J"/>
+                            <constraint firstItem="6Or-sj-3ii" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="guF-dP-ER2"/>
+                            <constraint firstItem="6Or-sj-3ii" firstAttribute="height" secondItem="CBQ-El-HaI" secondAttribute="height" id="keV-gA-V92"/>
+                            <constraint firstItem="CBQ-El-HaI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="287" id="yVU-fL-dBm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="32.833583208395808"/>
         </scene>
     </scenes>
 </document>

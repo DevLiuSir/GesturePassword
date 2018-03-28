@@ -9,17 +9,47 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    
+    /// 创建手势
+    ///
+    /// - Parameter sender: UIButton
+    @IBAction func createBtnClicked(_ sender: UIButton) {
+        print("创建手势密码---\(#function)")
+        let vc = GesturePasswordViewController(unlockType: .createPassword)
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
+    /// 验证手势
+    ///
+    /// - Parameter sender: UIButton
+    @IBAction func validationBtnClicked(_ sender: UIButton) {
+        
+        print("效验手势密码---\(#function)")
+        
+        if GesturePasswordViewController.gesturesPassword().length > 0 {
+            let vc = GesturePasswordViewController(unlockType: .validatePassword)
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+    
+    /// 删除手势
+    ///
+    /// - Parameter sender: UIButton
+    @IBAction func deleteBtnClicked(_ sender: UIButton) {
+        print("删除手势密码---\(#function)")
+        GesturePasswordViewController.deleteGesturesPassword()
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
+
+
+
 
