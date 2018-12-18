@@ -8,14 +8,13 @@
 
 import UIKit
 
-//按钮线宽
+/// 按钮线宽
 private let buttonCircleW : CGFloat = 0
-//按钮stroker圆宽
+/// 按钮stroker圆宽
 private let buttonWidth : CGFloat = 50
-
-//按钮内圆宽
+/// 按钮内圆宽
 private let smallButtonW : CGFloat = 20
-//内圆originXY
+/// 内圆originXY
 private let smallButtonXY : CGFloat = 20
 
 
@@ -128,7 +127,7 @@ class GesturePasswordButton: UIButton {
     /// - Parameters:
     ///   - color: 颜色
     ///   - state: 状态
-    func LCsetBackgroundColor(color: UIColor, forUIControlState state: UIControlState) {
+    func LCsetBackgroundColor(color: UIColor, forUIControlState state: UIControl.State) {
         self.setBackgroundImage(imageWithColor(color: color), for: state)
     }
     

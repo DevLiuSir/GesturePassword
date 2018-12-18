@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBAction func createBtnClicked(_ sender: UIButton) {
         print("创建手势密码---\(#function)")
         let vc = GesturePasswordViewController(unlockType: .createPassword)
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -31,6 +32,7 @@ class ViewController: UIViewController {
         
         if GesturePasswordViewController.gesturesPassword().count > 0 {
             let vc = GesturePasswordViewController(unlockType: .validatePassword)
+            vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
         }
     }

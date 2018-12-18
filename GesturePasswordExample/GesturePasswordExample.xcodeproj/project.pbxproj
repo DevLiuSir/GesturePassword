@@ -12,6 +12,7 @@
 		6B04C98A2067C21F007264BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B04C9882067C21F007264BA /* Main.storyboard */; };
 		6B04C98C2067C220007264BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B04C98B2067C220007264BA /* Assets.xcassets */; };
 		6B04C98F2067C220007264BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B04C98D2067C220007264BA /* LaunchScreen.storyboard */; };
+		6B75E024239CCD5B0077F393 /* LCUnlockType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B75E023239CCD5B0077F393 /* LCUnlockType.swift */; };
 		6B87FE4C20761AF50052A655 /* GesturePasswordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B87FE4620761AF50052A655 /* GesturePasswordButton.swift */; };
 		6B87FE4D20761AF50052A655 /* GesturePasswordPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B87FE4720761AF50052A655 /* GesturePasswordPreview.swift */; };
 		6B87FE4E20761AF50052A655 /* GesturePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B87FE4820761AF50052A655 /* GesturePasswordView.swift */; };
@@ -27,6 +28,7 @@
 		6B04C98B2067C220007264BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B04C98E2067C220007264BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B04C9902067C220007264BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B75E023239CCD5B0077F393 /* LCUnlockType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCUnlockType.swift; sourceTree = "<group>"; };
 		6B87FE4620761AF50052A655 /* GesturePasswordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GesturePasswordButton.swift; sourceTree = "<group>"; };
 		6B87FE4720761AF50052A655 /* GesturePasswordPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GesturePasswordPreview.swift; sourceTree = "<group>"; };
 		6B87FE4820761AF50052A655 /* GesturePasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GesturePasswordView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				6B87FE4A20761AF50052A655 /* solarized-yinyang.png */,
+				6B75E023239CCD5B0077F393 /* LCUnlockType.swift */,
 				6B87FE4820761AF50052A655 /* GesturePasswordView.swift */,
 				6B87FE4720761AF50052A655 /* GesturePasswordPreview.swift */,
 				6B87FE4620761AF50052A655 /* GesturePasswordButton.swift */,
@@ -114,11 +117,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = LC;
 				TargetAttributes = {
 					6B04C9802067C21F007264BA = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1120;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -162,6 +166,7 @@
 			files = (
 				6B04C9872067C21F007264BA /* ViewController.swift in Sources */,
 				6B87FE4F20761AF50052A655 /* GesturePasswordViewController.swift in Sources */,
+				6B75E024239CCD5B0077F393 /* LCUnlockType.swift in Sources */,
 				6B87FE4E20761AF50052A655 /* GesturePasswordView.swift in Sources */,
 				6B87FE4C20761AF50052A655 /* GesturePasswordButton.swift in Sources */,
 				6B04C9852067C21F007264BA /* AppDelegate.swift in Sources */,
@@ -205,6 +210,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -212,6 +218,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -245,6 +252,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -262,6 +270,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -269,6 +278,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -294,6 +304,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -307,7 +318,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LC.GesturePasswordExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -321,7 +332,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LC.GesturePasswordExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

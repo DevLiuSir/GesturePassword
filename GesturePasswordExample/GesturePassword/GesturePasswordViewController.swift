@@ -9,15 +9,6 @@
 import UIKit
 
 
-/// 解锁类型
-///
-/// - createPassword: 创建手势密码
-/// - validatePassword: 验证手势密码
-enum LCUnlockType {
-    case createPassword
-    case validatePassword
-}
-
 /// 手势密码key
 private let GesturesPassword = "gesturespassword"
 /// 边距X
@@ -225,7 +216,7 @@ extension GesturePasswordViewController {
         let right = CGPoint(x: position.x + 10, y: position.y)
         
         let animation = CABasicAnimation(keyPath: "position")
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         animation.fromValue = NSValue(cgPoint: left)
         animation.toValue = NSValue(cgPoint: right)
         animation.autoreverses = true
@@ -281,7 +272,7 @@ extension GesturePasswordViewController {
     }
     /// 获取密码字符串
     class func gesturesPassword() -> String {
-        return UserDefaults.standard.object(forKey: GesturesPassword) as! String
+        return UserDefaults.standard.object(forKey: GesturesPassword) as? String ?? ""
     }
 }
 
