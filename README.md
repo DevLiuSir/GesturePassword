@@ -2,8 +2,8 @@
 
 
 ![language](https://img.shields.io/badge/language-swift-orange.svg)
-[![swift  4.0](https://img.shields.io/badge/swift-4.0.3+-blue.svg?style=flat)](https://developer.apple.com/swift/)
-![xcode version](https://img.shields.io/badge/xcode-9+-brightgreen.svg)
+[![swift version](https://img.shields.io/badge/swift-5.1+-blue.svg?style=flat)](https://developer.apple.com/swift/)
+![xcode version](https://img.shields.io/badge/xcode-11.2+-brightgreen.svg)
 ![build](https://img.shields.io/appveyor/ci/gruntjs/grunt.svg)
 ![platform](https://img.shields.io/badge/platform-ios-lightgrey.svg)
 ![https://github.com/ChinaHackers/GesturePassword/blob/master/LICENSE](https://img.shields.io/github/license/ChinaHackers/GesturePassword.svg)
@@ -13,9 +13,9 @@
 
 ## Requirements
 
-- iOS 11.2
-- Xcode 9.2
-- Swift 4.0.3+
+- iOS 13.2
+- Xcode 11.2
+- Swift 5.1+
 
 ### Screencast from our Demo
 
